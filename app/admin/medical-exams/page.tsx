@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Sidebar from "@/components/Sidebar";
 import prisma from "@/lib/prisma";
-
+export const dynamic = "force-dynamic";
 export default async function MedicalExamsPage() {
   const exams = await prisma.medicalExam.findMany({
     include: {
