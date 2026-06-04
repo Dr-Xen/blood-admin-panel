@@ -1,6 +1,6 @@
 import Sidebar from "@/components/Sidebar";
 import prisma from "@/lib/prisma";
-
+export const dynamic = "force-dynamic";
 export default async function DashboardPage() {
   const totalDonors = await prisma.donor.count();
 
